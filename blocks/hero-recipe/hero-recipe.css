@@ -1,0 +1,47 @@
+.hero-recipe-container .hero-recipe-wrapper {
+  max-width: unset;
+  padding: 0;
+}
+
+.hero-recipe {
+  position: relative;
+  padding: 40px 24px;
+  min-height: 300px;
+}
+
+.hero-recipe h1,
+.hero-recipe h2,
+.hero-recipe h3,
+.hero-recipe h4,
+.hero-recipe h5,
+.hero-recipe h6,
+.hero-recipe p {
+  max-width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+  color: var(--background-color);
+}
+
+.hero-recipe.no-image * {
+  color: var(--text-color);
+}
+
+.hero-recipe picture {
+  position: absolute;
+  z-index: -1;
+  inset: 0;
+  object-fit: cover;
+  box-sizing: border-box;
+}
+
+.hero-recipe img {
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+}
+
+@media (width >= 900px) {
+  .hero-recipe {
+    padding: 40px 32px;
+  }
+}

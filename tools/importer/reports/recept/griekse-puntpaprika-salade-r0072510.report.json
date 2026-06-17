@@ -1,0 +1,14 @@
+{
+  "status": "success",
+  "url": "https://www.unileverfoodsolutions.nl/recept/griekse-puntpaprika-salade-R0072510.html",
+  "path": "recept/griekse-puntpaprika-salade-r0072510",
+  "timestamp": "2026-06-09T07:47:40.654Z",
+  "title": "Griekse puntpaprika salade Recept",
+  "template": "recipe-page",
+  "blocks": [
+    "hero-recipe",
+    "columns-recipe",
+    "cards-product",
+    "carousel-recipe"
+  ]
+}

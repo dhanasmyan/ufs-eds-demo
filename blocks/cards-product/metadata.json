@@ -1,0 +1,39 @@
+{
+  "variantName": "cards-product",
+  "baseBlock": "cards",
+  "version": "1.0.0",
+  "created": "2026-06-09T07:35:00.000Z",
+  "sourceContext": {
+    "originUrl": "https://www.unileverfoodsolutions.nl/recept/griekse-puntpaprika-salade-R0072510.html",
+    "originPage": "recipe detail page",
+    "blockPosition": "middle"
+  },
+  "visualCharacteristics": {
+    "colorScheme": "light",
+    "density": "compact",
+    "purpose": "product-feature",
+    "imagePattern": "icon"
+  },
+  "contentPattern": {
+    "structure": "product image + title + price + CTA",
+    "buttonCount": 1,
+    "imageCount": 1
+  },
+  "reuseGuidance": {
+    "suitableFor": [
+      "product feature cards on recipe pages",
+      "ingredient product showcases",
+      "single or multiple product tiles with add-to-cart"
+    ],
+    "notSuitableFor": [
+      "blog article cards",
+      "team member cards",
+      "feature/benefit cards without products"
+    ]
+  },
+  "usage": {
+    "pagesUsing": ["/recept/griekse-puntpaprika-salade-r0072510"],
+    "reuseCount": 1,
+    "lastUsed": "2026-06-09T07:35:00.000Z"
+  }
+}

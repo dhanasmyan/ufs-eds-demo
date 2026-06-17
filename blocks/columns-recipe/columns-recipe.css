@@ -1,0 +1,33 @@
+.columns-recipe > div {
+  display: flex;
+  flex-direction: column;
+}
+
+.columns-recipe img {
+  width: 100%;
+}
+
+.columns-recipe > div > div {
+  order: 1;
+}
+
+.columns-recipe > div > .columns-recipe-img-col {
+  order: 0;
+}
+
+.columns-recipe > div > .columns-recipe-img-col img {
+  display: block;
+}
+
+@media (width >= 900px) {
+  .columns-recipe > div {
+    align-items: center;
+    flex-direction: unset;
+    gap: 24px;
+  }
+
+  .columns-recipe > div > div {
+    flex: 1;
+    order: unset;
+  }
+}
