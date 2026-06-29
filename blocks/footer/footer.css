@@ -19,7 +19,7 @@ footer .footer p {
   color: var(--color-footer-text);
 }
 
-/* footer nav columns */
+/* footer nav links */
 footer .footer ul {
   list-style: none;
   margin: 0;
@@ -57,28 +57,17 @@ footer .footer h4 {
   letter-spacing: 0.05em;
 }
 
-/* footer logo/brand area */
-footer .footer .footer-brand {
-  margin-bottom: 32px;
-}
-
-footer .footer .footer-brand img {
-  height: 48px;
-  width: auto;
-  filter: brightness(0) invert(1);
-}
-
-/* footer bottom bar */
-footer .footer .footer-bottom {
+/* footer legal / bottom bar — second section in footer fragment */
+footer .footer > div:last-child {
   border-top: 1px solid rgb(255 255 255 / 12%);
   padding-top: 24px;
-  margin-top: 32px;
+  padding-bottom: 32px;
   display: flex;
   flex-direction: column;
-  gap: 16px;
+  gap: 8px;
 }
 
-footer .footer .footer-bottom p {
+footer .footer > div:last-child p {
   font-size: var(--body-font-size-xs);
   color: rgb(255 255 255 / 50%);
   margin: 0;
@@ -86,19 +75,24 @@ footer .footer .footer-bottom p {
 
 @media (width >= 900px) {
   footer .footer > div {
-    padding: 64px 40px 40px;
+    padding: 64px 40px 0;
   }
 
-  footer .footer .footer-bottom {
+  footer .footer > div:last-child {
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
+    padding: 24px 40px;
   }
 }
 
 @media (width >= 1200px) {
   footer .footer > div {
-    padding: 64px 48px 40px;
+    padding: 64px 48px 0;
+  }
+
+  footer .footer > div:last-child {
+    padding: 24px 48px;
   }
 }
 
