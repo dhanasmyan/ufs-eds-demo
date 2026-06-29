@@ -1,20 +1,104 @@
 footer {
-  background-color: var(--light-color);
-  font-size: var(--body-font-size-xs);
+  background-color: var(--color-footer-bg);
+  color: var(--color-footer-text);
+  font-size: var(--body-font-size-s);
+}
+
+footer .footer {
+  border-top: 4px solid var(--color-primary);
 }
 
 footer .footer > div {
   margin: auto;
-  max-width: 1200px;
-  padding: 40px 24px 24px;
+  max-width: 1280px;
+  padding: 56px 24px 32px;
 }
 
 footer .footer p {
+  margin: 0 0 12px;
+  color: var(--color-footer-text);
+}
+
+/* footer nav columns */
+footer .footer ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+footer .footer ul li {
+  margin-bottom: 10px;
+}
+
+footer .footer ul li a {
+  font-size: var(--body-font-size-xs);
+}
+
+footer .footer a:any-link {
+  color: var(--color-footer-text);
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+footer .footer a:hover {
+  color: var(--background-color);
+  text-decoration: underline;
+}
+
+/* footer headings */
+footer .footer h2,
+footer .footer h3,
+footer .footer h4 {
+  color: var(--background-color);
+  font-size: var(--body-font-size-m);
+  font-weight: 700;
+  margin: 0 0 16px;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+/* footer logo/brand area */
+footer .footer .footer-brand {
+  margin-bottom: 32px;
+}
+
+footer .footer .footer-brand img {
+  height: 48px;
+  width: auto;
+  filter: brightness(0) invert(1);
+}
+
+/* footer bottom bar */
+footer .footer .footer-bottom {
+  border-top: 1px solid rgb(255 255 255 / 12%);
+  padding-top: 24px;
+  margin-top: 32px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+footer .footer .footer-bottom p {
+  font-size: var(--body-font-size-xs);
+  color: rgb(255 255 255 / 50%);
   margin: 0;
 }
 
 @media (width >= 900px) {
   footer .footer > div {
-    padding: 40px 32px 24px;
+    padding: 64px 40px 40px;
+  }
+
+  footer .footer .footer-bottom {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
   }
 }
+
+@media (width >= 1200px) {
+  footer .footer > div {
+    padding: 64px 48px 40px;
+  }
+}
+

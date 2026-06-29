@@ -5,23 +5,66 @@
 
 .hero {
   position: relative;
-  padding: 40px 24px;
-  min-height: 300px;
+  display: flex;
+  align-items: flex-end;
+  padding: 48px 24px;
+  min-height: 400px;
+  overflow: hidden;
+  background-color: var(--color-dark);
+}
+
+.hero::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to top,
+    rgb(0 0 0 / 70%) 0%,
+    rgb(0 0 0 / 30%) 50%,
+    rgb(0 0 0 / 0%) 100%
+  );
+  z-index: 0;
+}
+
+.hero > div {
+  position: relative;
+  z-index: 1;
+  max-width: 1280px;
+  margin: 0 auto;
+  width: 100%;
 }
 
 .hero h1 {
-  max-width: 1200px;
-  margin-left: auto;
-  margin-right: auto;
   color: var(--background-color);
+  font-size: var(--heading-font-size-xl);
+  margin-bottom: 16px;
+  text-shadow: 0 2px 8px rgb(0 0 0 / 30%);
+  max-width: 700px;
+}
+
+.hero h2 {
+  color: var(--background-color);
+  font-size: var(--heading-font-size-l);
+  margin-bottom: 16px;
+  text-shadow: 0 2px 8px rgb(0 0 0 / 20%);
+  max-width: 700px;
+}
+
+.hero p {
+  color: rgb(255 255 255 / 90%);
+  font-size: var(--body-font-size-m);
+  max-width: 600px;
+  margin-bottom: 24px;
+}
+
+.hero .button-wrapper {
+  margin: 24px 0 0;
 }
 
 .hero picture {
   position: absolute;
   z-index: -1;
   inset: 0;
-  object-fit: cover;
-  box-sizing: border-box;
 }
 
 .hero img {
@@ -30,8 +73,74 @@
   height: 100%;
 }
 
+@media (width >= 600px) {
+  .hero {
+    min-height: 500px;
+    padding: 64px 40px;
+  }
+}
+
 @media (width >= 900px) {
   .hero {
-    padding: 40px 32px;
+    min-height: 600px;
+    padding: 80px 48px;
+    align-items: center;
+  }
+
+  .hero h1 {
+    font-size: var(--heading-font-size-xxl);
+  }
+}
+
+/* hero variant: centered */
+.hero.centered {
+  align-items: center;
+  text-align: center;
+}
+
+.hero.centered > div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.hero.centered h1,
+.hero.centered h2,
+.hero.centered p {
+  max-width: 800px;
+}
+
+/* hero variant: split (image right, text left) */
+@media (width >= 900px) {
+  .hero.split {
+    min-height: 480px;
+    background-color: var(--color-primary-light);
+  }
+
+  .hero.split::after {
+    display: none;
+  }
+
+  .hero.split > div {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 48px;
+    align-items: center;
+  }
+
+  .hero.split picture {
+    position: relative;
+    inset: unset;
+    border-radius: var(--border-radius-m);
+    overflow: hidden;
+  }
+
+  .hero.split h1,
+  .hero.split h2 {
+    color: var(--color-dark);
+  }
+
+  .hero.split p {
+    color: var(--text-color);
   }
 }
